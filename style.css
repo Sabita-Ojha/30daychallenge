@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+}
+h1 {
+    background-color: black;
+    text-align: center;
+    color: yellow;
+    margin-top: 5px;
+}
+
+.logform {
+    margin: auto;
+    display: block;
+    width: 400px;
+    margin-top: 70px;
+    background: rgb(144, 196, 247);
+    border: 2px #02ffff;
+    border-radius: 10px;
+
+}
+
+.logform h3 {
+    font-size: larger;
+    text-align: center;
+    font-style: inherit;
+    padding: 20px;
+    border-bottom: 1px solid silver;
+}
+
+.logform form {
+    padding: 40px 0px 30px;
+
+}
+
+.logform p {
+    font-style: calc();
+}
+
+.box {
+    padding-top: 0%;
+    padding-left: 40px;
+}
+
+.box input {
+    width: 300px;
+    height: 30px;
+}
+
+.box input:hover {
+    background-color: rgb(233, 233, 241);
+}
+
+.box button {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size:larger;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.box button:hover {
+    color: yellow;
+    background-color: blue;
+}
+#error{
+    color: red;
+}
+#error1{
+    color: red;
+}

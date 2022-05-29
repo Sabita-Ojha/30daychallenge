@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Email and Password Validation Using RegEx in JS</h1>
+    <div class="logform">
+        <h3>User Regestration</h3>
+        <form action="welcome.php" method="post" name="myForm" onsubmit="return validate()">
+            <div class=" box">
+                <label><b>User name</b></label><br>
+                <input type="text" name="myName" placeholder="Enter your name"><br><br>
+                <label><b>Email</b></label><br>
+                <input type="email" id="myemail" placeholder="Enter email id" name="thisemail"><br>
+                <span id="error"></span><br>
+                <label><b>Password</b></label><br>
+                <input type="password" id="mypassword" placeholder="Enter password" name="pass"><br>
+                <span id="error1"></span><br>
+                <button type="submit" style="width: 300px; height: 35px;">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function validate() {
+        var email = document.myForm.thisemail.value;
+        const checkMail = /[A-Za-z0-9_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z]{2,6}$/;
+        var password = document.myForm.pass.value;
+        const regexpass = /^(?=.*[0-9])(?=.*[!@#%$^&*])[A-Za-z0-9!@#$%^&*]{8,20}$/;
+        if (checkMail.test(email)) {
+         
+        }
+        else {
+            document.getElementById('error').innerHTML = "*Invalid email";
+            return false;
+        }
+        if (regexpass.test(password)) {
+            
+        }
+        else {
+            document.getElementById('error1').innerHTML = "*Incorrect password";
+            return false;
+        }
+        if(checkMail.test(email)&&regexpass.test(password)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }  
+</script>
+
+</html>
